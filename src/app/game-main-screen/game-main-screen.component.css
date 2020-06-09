@@ -1,0 +1,16 @@
+.main-screen {
+  width:608px;
+  padding-top:100px;
+  text-align: center; 
+}
+
+
+.main-screen__startGame {
+  padding: 5px 20px;
+  font-size: 22px;
+  color: white;
+  background: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

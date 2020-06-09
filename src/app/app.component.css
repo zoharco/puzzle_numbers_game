@@ -1,0 +1,9 @@
+main {
+  width: 608px;
+  height: 608px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 25px auto;
+  background: #f1f1bb;
+  border: 3px solid #000;
+}

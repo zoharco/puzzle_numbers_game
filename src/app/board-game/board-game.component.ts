@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 export class Card {
   isClickable: boolean;
@@ -22,6 +23,8 @@ export class BoardGameComponent implements OnInit {
   emptyIndex: number;
   cards:Card[] = [];
 
+  constructor(private router: Router) {}
+
   ngOnInit(){
     this.initCards();
     this.shuffleCards();
@@ -43,6 +46,21 @@ export class BoardGameComponent implements OnInit {
       this.updateEmptyIndex();
       this.updateClickableCards();
     }
+    if(this.checkGameOver()) {
+      this.router.navigate(['/game-over']);
+    }
+  }
+
+  checkGameOver() {
+    if(this.cards[this.cards.length - 1].value !== this.EMPTY){
+      return false;
+    }
+    for (let i = 1; i < this.cards.length; i++){
+      if(this.cards[i - 1].value > this.cards[i].value){
+        return false;
+      }
+    }
+    return true;
   }
 
   private updateClickableCards() {
@@ -81,6 +99,9 @@ export class BoardGameComponent implements OnInit {
       this.cards[i] = this.cards[j];
       this.cards[j] = temp;
     }
+    // temp = this.cards[14];
+    // this.cards[14] = this.cards[15];
+    // this.cards[15] = temp;
     this.updateEmptyIndex();
   }
 

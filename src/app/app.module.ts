@@ -4,12 +4,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BoardGameComponent } from './board-game/board-game.component';
+import { GameOverComponent } from './game-over/game-over.component';
+import { GameMainScreenComponent } from './game-main-screen/game-main-screen.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    BoardGameComponent
+    GameMainScreenComponent,
+    BoardGameComponent,
+    GameOverComponent
   ],
   imports: [
     BrowserModule,
