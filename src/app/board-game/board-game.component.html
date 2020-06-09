@@ -1,0 +1,12 @@
+
+<main>
+  <div class="board">
+    <div class="cardW" #number *ngFor="let card of cards; let i = index;" >
+      <div *ngIf="card.value !== 'empty'" 
+           class="card" 
+           [ngClass]="{'clickable': card.isClickable}" 
+           (click)="onClickCard(i)" 
+           [id]="i">{{ card.value }}</div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,35 @@
+.board {
+  width: 608px;
+  height: 608px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 25px auto;
+  background: #f1f1bb;
+  border: 3px solid #000;
+}
+
+.cardW {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border: 1px solid #000;
+}
+
+.card {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 148px;
+  text-align: center;
+  font-size: 100px;
+  cursor: default;
+}
+
+.card.clickable {
+  cursor: pointer;
+}
+
+#empty {
+}
