@@ -1,8 +1,9 @@
 .game-over { 
-  width:608px;
+  width:606px;
+  height: calc(100% - 102px);
   padding-top:100px;
   text-align: center; 
-
+  border:1px solid black;
 }
 .game-over__newGame {
   padding: 5px 20px;
